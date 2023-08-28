@@ -6,4 +6,4 @@ phases.html
 This project is the result of experimenting with OpenAI's ChatGPT to
 develop a tool for visualizing the phases of the Moon. It is licensed
 under the MIT License. See the LICENSE file for details. The project
-source code is hosted on GitHub at XXX.
+source code is hosted on GitHub at [https://github.com/dcrastro/phases](https://github.com/dcrastro/phases).
