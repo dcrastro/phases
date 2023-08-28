@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Moon Phases Visualization</title>
+    <style>
+      body {
+        margin: 0;
+      }
+      canvas {
+        display: block;
+      }
+      .modal {
+	  display: none;
+	  position: fixed;
+	  z-index: 100;
+	  left: 0;
+	  top: 0;
+	  width: 100%;
+	  height: 100%;
+	  overflow: auto;
+	  background-color: rgba(0, 0, 0, 0.4);
+      }
+      .modal-content {
+	  background-color: #fefefe;
+	  margin: 15% auto;
+	  padding: 20px;
+	  border: 1px solid #888;
+	  width: 80%;
+      }
+      .close {
+	  color: #aaaaaa;
+	  float: right;
+	  font-size: 28px;
+	  font-weight: bold;
+      }
+      .close:hover, .close:focus {
+	  color: #000;
+	  text-decoration: none;
+	  cursor: pointer;
+      }
+      .control-panel {
+	  background-color: rgba(255, 255, 255, 0.8);
+	  padding: 5px;
+	  border-radius: 5px;
+      }
+      .dg.main {
+	  position: fixed;
+	  bottom: 20px;
+	  right: 5px;
+	  top: auto;
+	  width: auto !important;
+      }
+      .dg.main .close-button {
+	  display: none;
+      }
+      .dg.main .close-top {
+	  display: none;
+      }
+      .dg.main .close-bottom {
+	  display: none;
+      }
+      .dg .folders {
+	  margin-right: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="control-panel" style="position: absolute; top: 10px; left: 10px; z-index: 1;">
+      <label for="moon-slider">Moon Position:</label>
+      <input type="range" id="moon-slider" min="0" max="360" value="0" />
+    </div>
+    <div class="control-panel" style="position: absolute; top: 10px; right: 10px; z-index: 1;">
+      <label for="geocentric-toggle">Geocentric View:</label>
+      <input type="checkbox" id="geocentric-toggle" />
+    </div>
+    <div class="control-panel" style="position: absolute; bottom: 10px; left: 10px; z-index: 1;">
+      <button id="info-button">Info</button>
+    </div>
+    <div id="info-modal" class="modal">
+      <div class="modal-content">
+	<span id="close-button" class="close">&times;</span>
+	<h2>Moon Phases Visualization</h2>
+	<p>
+	  This visualization shows the Moon's phases as seen from Earth. You can use the slider to adjust the Moon's position in its orbit around the Earth.
+	</p>
+	<p>
+	  Check the "Geocentric View" box to switch to a view from the center of the Earth, pointing directly at the Moon.
+	</p>
+	<p>
+	  &copy; 2023 <a href="https://www.astro.umd.edu/~dcr/" target="_blank">Derek C. Richardson</a> under the MIT license. The full source code is hosted on <a href="" target="_blank">GitHub</a>. This project was developed with the assistance of <a href="https://chat.openai.com/" target="_blank">ChatGPT</a>, an AI language model developed by OpenAI. ChatGPT provided essential guidance and code suggestions throughout the development process. This project uses the <a href="https://github.com/mrdoob/three.js/" target="_blank">three.js</a> JavaScript 3D Library with OrbitControls.js add-on under the MIT license. The textures for the Earth, Moon, and Sun are from <a href="https://www.solarsystemscope.com/textures/" target="_blank">https://www.solarsystemscope.com/textures/</a> under the Attribution 4.0 International (CC BY 4.0) license.
+	</p>
+      </div>
+    </div>
+    <script type="module" src="main.js"></script>
+  </body>
+</html>

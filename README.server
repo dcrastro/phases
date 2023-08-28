@@ -1,0 +1,2 @@
+python -m http.server 8000
+use SHIFT-COMMAND-R to force cache refresh if needed
