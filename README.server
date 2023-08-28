@@ -1,2 +1,4 @@
-python -m http.server 8000
-use SHIFT-COMMAND-R to force cache refresh if needed
+To test locally:
+1. Run "python -m http.server 8000"
+2. Open this folder with your browser
+Note: use SHIFT-COMMAND-R in browser to force cache refresh if needed.
